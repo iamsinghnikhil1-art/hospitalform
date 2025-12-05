@@ -32,7 +32,7 @@
         box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
-    h2 {
+    h2 { 
         background: #0d1a80;
         padding: 12px;
         border-radius: 4px;
@@ -65,12 +65,20 @@
         font-size: 14px;
     }
 
-    .note {
-        margin-top: 30px;
-        padding: 15px;
-        background: #eef2ff;
-        border-left: 4px solid #1e3a8a;
-        font-size: 14px;
+    button {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        background: #1b2a7b;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+
+    button:hover {
+        background: #14205d;
     }
 
     footer {
@@ -89,107 +97,112 @@
 
 <div class="container">
 
-    <p>Please complete all sections as thoroughly as possible. If a section does not apply, you may leave it blank or cross it out.</p>
+    <form action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST">
 
+        <!-- Hidden settings -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
 
-    <h2>Personal Information</h2>
+        <h2>Personal Information</h2>
 
-    <div class="form-row">
-        <div class="form-col">
-            <label>Full name:</label>
-            <input type="text">
+        <div class="form-row">
+            <div class="form-col">
+                <label>Full name:</label>
+                <input type="text" name="full_name" required>
+            </div>
         </div>
-    </div>
 
-    <div class="form-row">
-        <div class="form-col">
-            <label>Date of birth:</label>
-            <input type="date">
+        <div class="form-row">
+            <div class="form-col">
+                <label>Date of birth:</label>
+                <input type="date" name="dob">
+            </div>
+            <div class="form-col">
+                <label>Sex/Gender:</label>
+                <input type="text" name="gender">
+            </div>
         </div>
-        <div class="form-col">
-            <label>Sex/Gender:</label>
-            <input type="text">
-        </div>
-    </div>
 
-    <div class="form-row">
-        <div class="form-col">
-            <label>Address:</label>
-            <input type="text">
+        <div class="form-row">
+            <div class="form-col">
+                <label>Address:</label>
+                <input type="text" name="address">
+            </div>
         </div>
-    </div>
 
-    <div class="form-row">
-        <div class="form-col">
-            <label>City:</label>
-            <input type="text">
+        <div class="form-row">
+            <div class="form-col">
+                <label>City:</label>
+                <input type="text" name="city">
+            </div>
+            <div class="form-col">
+                <label>State/Province:</label>
+                <input type="text" name="state">
+            </div>
+            <div class="form-col">
+                <label>ZIP/Postal Code:</label>
+                <input type="text" name="zip">
+            </div>
         </div>
-        <div class="form-col">
-            <label>State/Province:</label>
-            <input type="text">
-        </div>
-        <div class="form-col">
-            <label>ZIP/Postal Code:</label>
-            <input type="text">
-        </div>
-    </div>
 
-    <div class="form-row">
-        <div class="form-col">
-            <label>Phone:</label>
-            <input type="text">
+        <div class="form-row">
+            <div class="form-col">
+                <label>Phone:</label>
+                <input type="text" name="phone">
+            </div>
+            <div class="form-col">
+                <label>Email:</label>
+                <input type="email" name="email">
+            </div>
         </div>
-        <div class="form-col">
-            <label>Email:</label>
-            <input type="email">
-        </div>
-    </div>
 
-    <div class="form-row">
-        <div class="form-col">
-            <label>Parent/Guardian (if patient is a minor):</label>
-            <input type="text">
+        <div class="form-row">
+            <div class="form-col">
+                <label>Parent/Guardian (if patient is a minor):</label>
+                <input type="text" name="guardian">
+            </div>
         </div>
-    </div>
 
-    <div class="form-row">
-        <div class="form-col">
-            <label>Relationship:</label>
-            <input type="text">
+        <div class="form-row">
+            <div class="form-col">
+                <label>Relationship:</label>
+                <input type="text" name="relationship">
+            </div>
+            <div class="form-col">
+                <label>Phone:</label>
+                <input type="text" name="guardian_phone">
+            </div>
         </div>
-        <div class="form-col">
-            <label>Phone:</label>
-            <input type="text">
-        </div>
-    </div>
 
+        <h2>Emergency Contact</h2>
 
-    <h2>Emergency Contact</h2>
+        <div class="form-row">
+            <div class="form-col">
+                <label>Emergency Contact Name:</label>
+                <input type="text" name="emergency_name">
+            </div>
+        </div>
 
-    <div class="form-row">
-        <div class="form-col">
-            <label>Emergency Contact Name:</label>
-            <input type="text">
+        <div class="form-row">
+            <div class="form-col">
+                <label>Relationship to Patient:</label>
+                <input type="text" name="emergency_relation">
+            </div>
+            <div class="form-col">
+                <label>Phone:</label>
+                <input type="text" name="emergency_phone">
+            </div>
         </div>
-    </div>
 
-    <div class="form-row">
-        <div class="form-col">
-            <label>Relationship to Patient:</label>
-            <input type="text">
+        <div class="form-row">
+            <div class="form-col">
+                <label>Alternate Phone (optional):</label>
+                <input type="text" name="alternate_phone">
+            </div>
         </div>
-        <div class="form-col">
-            <label>Phone:</label>
-            <input type="text">
-        </div>
-    </div>
 
-    <div class="form-row">
-        <div class="form-col">
-            <label>Alternate Phone (optional):</label>
-            <input type="text">
-        </div>
-    </div>
+        <button type="submit">Submit Form</button>
+    </form>
 
 </div>
 
